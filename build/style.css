@@ -2,7 +2,8 @@
 * {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-blend-mode: overlay; }
 
 body {
   background-color: #E5E5E5;
@@ -22,50 +23,75 @@ p {
 .header {
   display: flex;
   justify-content: center;
-  min-height: 750px; }
+  min-height: 750px;
+  padding: 100px 0px;
+  background-image: url(images/header.jpg); }
   .header .container {
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center; }
   .header__slogan {
-    color: #FFFFFF; }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FFFFFF;
+    margin-bottom: 60px; }
     .header__slogan h1 {
       font-size: 90px;
       text-shadow: 2px 2px 0px #000000;
       text-align: center; }
+    .header__slogan::after {
+      content: '';
+      display: block;
+      width: 250px;
+      height: 47px;
+      margin-top: 60px;
+      background-image: url(images/header_post.png); }
   .header__navigation {
     display: flex;
-    justify-content: center; }
+    width: 40%;
+    justify-content: space-between; }
     .header__navigation__button1, .header__navigation__button2 {
+      padding: 30px 45px;
       background-color: rgba(255, 255, 255, 0.6);
-      border: 1px solid #FFFFFF; }
+      border: 1px solid #FFFFFF;
+      text-transform: uppercase;
+      color: #FFFFFF; }
 
 .about {
   display: flex;
   justify-content: center;
-  min-height: 750px; }
+  min-height: 750px;
+  padding: 100px 0px;
+  background-image: url(images/about_pattern.jpg), linear-gradient(270deg, #F4F2F2, #FFFFFF); }
 
 .ingredients {
   display: flex;
   justify-content: center;
-  min-height: 750px; }
+  min-height: 750px;
+  padding: 100px 0px; }
 
 .menu {
   display: flex;
   justify-content: center;
-  min-height: 1125px; }
+  min-height: 1125px;
+  padding: 100px 0px; }
 
 .reviews {
   display: flex;
   justify-content: center;
-  min-height: 750px; }
+  min-height: 750px;
+  padding: 100px 0px; }
 
 .reservation {
   display: flex;
   justify-content: center;
-  min-height: 750px; }
+  min-height: 750px;
+  padding: 100px 0px; }
 
 .footer {
   display: flex;
   justify-content: center;
-  min-height: 375px; }
+  min-height: 375px;
+  padding: 100px 0px; }
 
 /*# sourceMappingURL=style.css.map */

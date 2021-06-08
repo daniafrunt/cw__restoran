@@ -1,3 +1,5 @@
 .about {
     @include section(750px);
+    background-image: url(images/about_pattern.jpg),
+                      linear-gradient(270deg, #F4F2F2, $color__white);
 }
