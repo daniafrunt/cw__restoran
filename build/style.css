@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Yeseva+One&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+body {
+  background-color: #E5E5E5;
+  font-size: 16px; }
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  width: 90%; }
+
+h1, h2 {
+  font-family: 'Yeseva One'; }
+
+p {
+  font-family: Lato; }
+
+.header {
+  display: flex;
+  justify-content: center;
+  min-height: 750px; }
+  .header .container {
+    flex-direction: column; }
+  .header__slogan {
+    color: #FFFFFF; }
+    .header__slogan h1 {
+      font-size: 90px;
+      text-shadow: 2px 2px 0px #000000;
+      text-align: center; }
+  .header__navigation {
+    display: flex;
+    justify-content: center; }
+    .header__navigation__button1, .header__navigation__button2 {
+      background-color: rgba(255, 255, 255, 0.6);
+      border: 1px solid #FFFFFF; }
+
+.about {
+  display: flex;
+  justify-content: center;
+  min-height: 750px; }
+
+.ingredients {
+  display: flex;
+  justify-content: center;
+  min-height: 750px; }
+
+.menu {
+  display: flex;
+  justify-content: center;
+  min-height: 1125px; }
+
+.reviews {
+  display: flex;
+  justify-content: center;
+  min-height: 750px; }
+
+.reservation {
+  display: flex;
+  justify-content: center;
+  min-height: 750px; }
+
+.footer {
+  display: flex;
+  justify-content: center;
+  min-height: 375px; }
+
+/*# sourceMappingURL=style.css.map */

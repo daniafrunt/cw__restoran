@@ -1,0 +1,11 @@
+@mixin section($hgh) {
+    display: flex;
+    justify-content: center;
+    min-height: $hgh;
+}
+
+@mixin media($wid) {
+    @media screen and($wid) {
+        @content;
+    }
+}

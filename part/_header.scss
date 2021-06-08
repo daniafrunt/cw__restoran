@@ -1,0 +1,22 @@
+.header {
+    @include section(750px);
+    .container {
+        flex-direction: column;
+    }
+    &__slogan {
+        color: $color__white;
+        h1{
+            font-size: 90px;
+            text-shadow: 2px 2px 0px #000000;
+            text-align: center;
+        }
+    }
+    &__navigation {
+        display: flex;
+        justify-content: center;
+        &__button1, &__button2 {
+            background-color: rgba(255, 255, 255, .6);
+            border: 1px solid $color__white;
+        }
+    }
+}
