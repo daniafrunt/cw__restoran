@@ -4,7 +4,6 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    background-blend-mode: overlay;
 }
 
 body {
@@ -18,10 +17,15 @@ body {
     width: 90%;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: 'Yeseva One';
 }
 
 p {
     font-family: Lato;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
 }

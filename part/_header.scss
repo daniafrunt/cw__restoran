@@ -17,12 +17,8 @@
             text-align: center;
         }
         &::after {
-            content: '';
-            display: block;
-            width: 250px;
-            height: 47px;
+            @include after(250px, 47px, 'images/vector_white.png');
             margin-top: 60px;
-            background-image: url(images/header_post.png);
         }
     }
     &__navigation {

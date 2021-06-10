@@ -1,3 +1,4 @@
 .menu {
     @include section(1125px);
+    @include white_bg('images/pattern2.png');
 }

@@ -10,3 +10,19 @@
         @content;
     }
 }
+
+@mixin after($width__after, $height__after, $image__after) {
+    content: '';
+    display: block;
+    width: $width__after;
+    height: $height__after;
+    background-repeat: no-repeat;
+    background-image: url($image__after);
+}
+
+@mixin white_bg($white__bg) {
+    background-blend-mode: overlay;
+    background-image: url($white__bg),
+                      linear-gradient(270deg, #F4F2F2, $color__white);
+    box-shadow: inset 0px 4px 40px rgba(0, 0, 0, 0.1);
+}

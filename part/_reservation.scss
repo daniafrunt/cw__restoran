@@ -1,3 +1,4 @@
 .reservation {
     @include section(750px);
+    @include white_bg('images/pattern1.jpg');
 }
