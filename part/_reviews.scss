@@ -1,3 +1,31 @@
 .reviews {
     @include section(750px);
+    background-image: url(images/reviews.jpg);
+    background-position: center;
+    text-align: center;
+    .container {
+        justify-content: center;
+    }
+    &__box {
+        display: flex;
+        width: 80%;
+        padding: 70px 80px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        color: $color__white;
+        background-color: rgba(0, 0, 0, .8);
+    }
+    &__quote {
+        font-size: 24px;
+        line-height: 2em;
+        &__autor {
+            &::before {
+                content: '- ';
+            }
+        }
+    }
+    h2 {
+        font-size: 36px;
+    }
 }

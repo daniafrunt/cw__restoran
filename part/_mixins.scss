@@ -26,3 +26,8 @@
                       linear-gradient(270deg, #F4F2F2, $color__white);
     box-shadow: inset 0px 4px 40px rgba(0, 0, 0, 0.1);
 }
+
+@mixin form__before($content) {
+    content: $content;
+    display: block;    
+}

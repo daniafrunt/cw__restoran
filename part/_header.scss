@@ -25,7 +25,8 @@
         display: flex;
         width: 40%;
         justify-content: space-between;
-        &__button1, &__button2 {
+        a {
+            display: block;
             padding: 30px 45px;
             background-color: rgba(255, 255, 255, .6);
             border: 1px solid $color__white;
