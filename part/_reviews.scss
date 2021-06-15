@@ -1,7 +1,7 @@
 .reviews {
     @include section(750px);
     background-image: url(images/reviews.jpg);
-    background-position: center;
+    @extend %bg;
     text-align: center;
     .container {
         justify-content: center;
@@ -15,6 +15,9 @@
         justify-content: space-between;
         color: $color__white;
         background-color: rgba(0, 0, 0, .8);
+        @include media($width__phone) {
+            padding: 50px;
+        }
     }
     &__quote {
         font-size: 24px;
@@ -23,6 +26,9 @@
             &::before {
                 content: '- ';
             }
+        }
+        @include media($width__tablet) {
+            margin: 40px 0px;
         }
     }
     h2 {

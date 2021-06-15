@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&family=Yeseva+One&display=swap");
+.header, .ingredients, .reviews {
+  background-repeat: no-repeat;
+  background-size: cover; }
+
 * {
   margin: 0px;
   padding: 0px;
@@ -46,13 +50,12 @@ a {
       font-size: 90px;
       text-shadow: 2px 2px 0px #000000;
       text-align: center; }
+      @media screen and (max-width: 512px) {
+        .header__slogan h1 {
+          font-size: 60px; } }
     .header__slogan::after {
-      content: '';
+      content: url("images/vector_white.png");
       display: block;
-      width: 250px;
-      height: 47px;
-      background-repeat: no-repeat;
-      background-image: url("images/vector_white.png");
       margin-top: 60px; }
   .header__navigation {
     display: flex;
@@ -63,8 +66,18 @@ a {
       padding: 30px 45px;
       background-color: rgba(255, 255, 255, 0.6);
       border: 1px solid #FFFFFF;
+      text-align: center;
       text-transform: uppercase;
       color: #FFFFFF; }
+      @media screen and (max-width: 768px) {
+        .header__navigation a:first-child {
+          margin-bottom: 35px; } }
+    @media screen and (max-width: 768px) {
+      .header__navigation {
+        flex-direction: column; } }
+    @media screen and (max-width: 512px) {
+      .header__navigation {
+        width: 60%; } }
 
 .about {
   display: flex;
@@ -77,11 +90,26 @@ a {
   text-align: center; }
   .about .container {
     justify-content: space-between; }
+    @media screen and (max-width: 768px) {
+      .about .container {
+        justify-content: center; } }
   .about__par {
     width: 40%; }
     .about__par__image {
       display: flex;
       justify-content: flex-end; }
+      @media screen and (max-width: 768px) {
+        .about__par__image {
+          justify-content: center; } }
+    @media screen and (max-width: 768px) {
+      .about__par p {
+        margin: 25px 0px; } }
+    @media screen and (max-width: 768px) {
+      .about__par {
+        width: 60%; } }
+  @media screen and (max-width: 768px) {
+    .about__image {
+      display: none; } }
   .about h2 {
     display: flex;
     flex-direction: column;
@@ -89,13 +117,12 @@ a {
     color: #CC9900;
     font-size: 36px; }
     .about h2::after {
-      content: '';
+      content: url("images/vector_yellow.png");
       display: block;
-      width: 132px;
-      height: 24px;
-      background-repeat: no-repeat;
-      background-image: url("images/vector_yellow.png");
       margin: 25px 0px 15px 0px; }
+      @media screen and (max-width: 768px) {
+        .about h2::after {
+          margin: 25px 0px 0px 0px; } }
   .about p {
     line-height: 28px; }
 
@@ -113,25 +140,28 @@ a {
     width: 50%;
     padding: 50px 100px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: column;
     color: #FFFFFF;
     background-color: rgba(0, 0, 0, 0.8); }
+    @media screen and (max-width: 768px) {
+      .ingredients__box {
+        width: 100%;
+        padding: 50px; } }
   .ingredients h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 36px; }
     .ingredients h2::after {
-      content: '';
+      content: url("images/vector_white2.png");
       display: block;
-      width: 250px;
-      height: 47px;
-      background-repeat: no-repeat;
-      background-image: url("images/vector_white.png");
-      margin: 25px 0px 25px 0px; }
+      margin: 25px 0px 0px 0px; }
   .ingredients p {
     line-height: 28px; }
+    @media screen and (max-width: 512px) {
+      .ingredients p {
+        margin: 25px 0px; } }
   .ingredients img {
     display: block;
     transform: translate(-10px, -10px); }
@@ -145,6 +175,12 @@ a {
       border-radius: 100%;
       overflow: hidden;
       border: 5px solid rgba(204, 153, 0, 0.5); }
+    @media screen and (max-width: 768px) {
+      .ingredients__navigation {
+        justify-content: space-evenly; } }
+    @media screen and (max-width: 512px) {
+      .ingredients__navigation {
+        display: none; } }
 
 .menu {
   display: flex;
@@ -156,6 +192,10 @@ a {
   box-shadow: inset 0px 4px 40px rgba(0, 0, 0, 0.1); }
   .menu .container {
     justify-content: space-between; }
+    @media screen and (max-width: 768px) {
+      .menu .container {
+        flex-direction: column;
+        align-items: center; } }
   .menu h1 {
     display: flex;
     margin: 15px 0px 0px 0px;
@@ -164,15 +204,19 @@ a {
     color: #CC9900;
     font-size: 36px; }
     .menu h1::after {
-      content: '';
+      content: url("images/vector_yellow.png");
       display: block;
-      width: 132px;
-      height: 24px;
-      background-repeat: no-repeat;
-      background-image: url("images/vector_yellow.png");
       margin: 25px 0px 0px 0px; }
   .menu__col1, .menu__col2 {
     width: 45%; }
+    @media screen and (max-width: 768px) {
+      .menu__col1, .menu__col2 {
+        width: 80%; } }
+  @media screen and (max-width: 768px) {
+    .menu__container {
+      margin: 0px 0px 40px 0px; }
+      .menu__container:nth-child(3) {
+        margin: 0px; } }
   .menu__container, .menu__items {
     display: flex;
     flex-direction: column; }
@@ -201,7 +245,6 @@ a {
   min-height: 750px;
   padding: 100px 0px;
   background-image: url(images/reviews.jpg);
-  background-position: center;
   text-align: center; }
   .reviews .container {
     justify-content: center; }
@@ -214,11 +257,17 @@ a {
     justify-content: space-between;
     color: #FFFFFF;
     background-color: rgba(0, 0, 0, 0.8); }
+    @media screen and (max-width: 512px) {
+      .reviews__box {
+        padding: 50px; } }
   .reviews__quote {
     font-size: 24px;
     line-height: 2em; }
     .reviews__quote__autor::before {
       content: '- '; }
+    @media screen and (max-width: 768px) {
+      .reviews__quote {
+        margin: 40px 0px; } }
   .reviews h2 {
     font-size: 36px; }
 
@@ -241,6 +290,9 @@ a {
       width: 48%; }
       .reservation__images__item img {
         width: 100%; }
+    @media screen and (max-width: 768px) {
+      .reservation__images {
+        display: none; } }
   .reservation__form {
     width: 40%;
     flex-direction: column;
@@ -255,15 +307,13 @@ a {
         color: #CC9900;
         font-size: 36px; }
         .reservation__form__text h1::after {
-          content: '';
+          content: url("images/vector_yellow.png");
           display: block;
-          width: 132px;
-          height: 24px;
-          background-repeat: no-repeat;
-          background-image: url("images/vector_yellow.png");
           margin: 25px 0px 0px 0px; }
       .reservation__form__text p {
         line-height: 2em; }
+        .reservation__form__text p:nth-child(1n+1) {
+          margin-top: 20px; }
     .reservation__form__forms {
       display: flex;
       flex-wrap: wrap;
@@ -272,15 +322,18 @@ a {
       .reservation__form__forms input {
         width: 45%;
         height: 40px;
-        padding: 10px; }
-        .reservation__form__forms input:first-child {
-          margin: 0px 0px 45px 0px; }
+        padding: 10px;
+        margin: 25px 0px;
+        border: solid 1px #CC9900; }
     .reservation__form__button {
       display: block;
       text-align: center;
       padding: 10px 60px;
       background-color: #CC9900;
       color: #FFFFFF; }
+    @media screen and (max-width: 768px) {
+      .reservation__form {
+        width: 80%; } }
 
 .footer {
   display: flex;
@@ -292,6 +345,10 @@ a {
   color: #FFFFFF; }
   .footer .container {
     justify-content: space-between; }
+    @media screen and (max-width: 768px) {
+      .footer .container {
+        flex-direction: column;
+        align-items: center; } }
   .footer__element {
     display: flex;
     width: 30%;
@@ -303,15 +360,23 @@ a {
       align-items: center;
       font-size: 21px; }
       .footer__element h2::after {
-        content: '';
+        content: url("images/vector_white2.png");
         display: block;
-        width: 200px;
-        height: 40px;
-        background-repeat: no-repeat;
-        background-image: url("images/vector_white.png");
         margin: 25px 0px 40px;
         background-size: contain; }
+        @media screen and (max-width: 768px) {
+          .footer__element h2::after {
+            margin: 10px 0px 20px; } }
+    @media screen and (max-width: 768px) {
+      .footer__element {
+        width: 50%; }
+        .footer__element:nth-child(1n+1) {
+          margin-top: 60px; }
+        .footer__element:first-child {
+          margin-top: 0px; } }
   .footer__dates {
     justify-content: space-between; }
+    .footer__dates p {
+      margin: 0px 0px 20px 0px; }
 
 /*# sourceMappingURL=style.css.map */

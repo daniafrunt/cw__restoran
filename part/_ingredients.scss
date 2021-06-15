@@ -2,7 +2,7 @@
     @include section(750px);
     background-image: url(images/ingredients.jpg);
     text-align: center;
-
+    @extend %bg;
     .container {
         justify-content: flex-end;
     }
@@ -11,10 +11,14 @@
         width: 50%;
         padding: 50px 100px;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-direction: column;
         color: $color__white;
         background-color: rgba(0, 0, 0, .8);
+        @include media($width__tablet) {
+            width: 100%;
+            padding: 50px;
+        }
     }
     h2 {
         display: flex;
@@ -22,13 +26,15 @@
         align-items: center;
         font-size: 36px;
         &::after {
-            @include after(250px, 47px, 'images/vector_white.png');
-            margin: 25px 0px 25px 0px;
-            // padding-bottom: 25px;
+            @include after('images/vector_white2.png');
+            margin: 25px 0px 0px 0px;
         }
     }
     p {
         line-height: 28px;
+        @include media($width__phone) {
+            margin: 25px 0px;
+        }
     }
     img {
         display: block;
@@ -38,13 +44,18 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
-
         &__item {
             width: 115px;
             height: 115px;
             border-radius: 100%;
             overflow: hidden;
-            border: 5px solid rgba(204, 153, 0, 0.5);
+            border: 5px solid rgba(204, 153, 0, 0.5);   
+        }
+        @include media($width__tablet) {
+            justify-content: space-evenly;
+        }
+        @include media($width__phone) {
+            display: none;
         }
     }
 }

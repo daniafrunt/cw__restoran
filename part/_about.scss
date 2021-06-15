@@ -4,12 +4,31 @@
     text-align: center;
     .container {
         justify-content: space-between;
+        @include media($width__tablet) {
+            justify-content: center;
+        }
     }
     &__par {
         width: 40%;
         &__image {
             display: flex;
             justify-content: flex-end;
+            @include media($width__tablet) {
+                justify-content: center;
+            }
+        }
+        p {
+            @include media($width__tablet) {
+                margin: 25px 0px;
+            }
+        }
+        @include media($width__tablet) {
+            width: 60%;
+        }
+    }
+    &__image {
+        @include media($width__tablet) {
+            display: none;
         }
     }
     h2 {
@@ -19,8 +38,11 @@
         color: $color__orange;
         font-size: 36px;
         &::after {
-            @include after(132px, 24px, 'images/vector_yellow.png');
+            @include after('images/vector_yellow.png');
             margin: 25px 0px 15px 0px;
+            @include media($width__tablet) {
+                margin: 25px 0px 0px 0px;
+            }
         }
     }
     p {
